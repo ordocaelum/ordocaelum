@@ -6,15 +6,16 @@ repository (see "Moving to a private repo" below).
 
 | File | What it covers |
 |---|---|
+| [`00-source-blueprint.md`](00-source-blueprint.md) | The original Google Doc, imported verbatim |
 | [`01-business-blueprint.md`](01-business-blueprint.md) | How Synty's business works, what to copy, what to avoid, revenue model, roadmap |
-| [`art-direction/02-style-options.md`](art-direction/02-style-options.md) | Five candidate art styles, scored |
-| [`art-direction/03-style-bible.md`](art-direction/03-style-bible.md) | The recommended style, written as production rules |
-| [`04-first-pack-plan.md`](04-first-pack-plan.md) | Scope and checklist for pack #1 |
+| [`art-direction/02-style-options.md`](art-direction/02-style-options.md) | Candidate styles scored against the source doc's test |
+| [`art-direction/03-style-bible.md`](art-direction/03-style-bible.md) | "Ordo PSX" style bible: production rules |
+| [`04-first-pack-plan.md`](04-first-pack-plan.md) | Shader kit + Core pack + micro-expansion plan |
 
 ## Status
 
-- [ ] Original "Replication Blueprint" (Google share link) merged in. It could not be fetched from the build environment, so paste its contents into `00-source-blueprint.md`.
-- [ ] Art style locked (recommendation: **Option C, "Gilded Facet"**)
+- [x] Original blueprint merged in (`00-source-blueprint.md`)
+- [ ] Art style locked (recommendation: **PS1-era retro, "Ordo PSX"**; Gilded Facet parked as a second line)
 - [ ] Moved into its own private repo
 
 ## Moving to a private repo

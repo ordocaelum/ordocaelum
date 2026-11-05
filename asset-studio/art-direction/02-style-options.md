@@ -1,30 +1,37 @@
 # Art Style Options
 
-Goal: a style that is **cheap to mass-produce** (like Synty's palette-atlas workflow)
-but **instantly distinguishable** from POLYGON, and that suits a niche Synty underserves.
+## The selection test (from the source blueprint)
 
-Scoring: 1 (poor) to 5 (strong).
+> "It must be a style that is **technically easy for your team to produce fast**, but
+> **hard for a solo programmer to make look cohesive on their own**." It also has to be one
+> that indie developers want and that **no one is standardizing into massive modular libraries**.
 
-| # | Style | Look in one line | Production speed | Distinct from Synty | Market demand | Mix-and-match potential | Total |
+So each candidate is scored on four things (1 = poor, 5 = strong):
+- **Fast to make:** cost per asset for us
+- **Hard to DIY:** how hard it is for a coder to get it looking consistent alone. This is why people pay.
+- **Demand:** how many indie projects want this look right now
+- **Open lane:** no Synty-scale modular library exists for it yet
+
+| # | Style | Source | Fast to make | Hard to DIY | Demand | Open lane | Total |
 |---|---|---|---|---|---|---|---|
-| A | **Clean Flat Low-Poly** | Flat-shaded facets, gradient atlas | 5 | 1 | 5 | 5 | 16 |
-| B | **Soft Toy / Chunky Bevel** | Rounded, smooth-shaded, pastel, "vinyl toy" | 4 | 4 | 4 | 4 | 16 |
-| C | **Gilded Facet** (recommended) | Bevelled facets, toon-ramp shading, deep jewel palette with gold accents, mythic/celestial themes | 4 | 5 | 4 | 5 | **18** |
-| D | **Hand-Painted Stylized** | WoW-like painted textures | 2 | 4 | 4 | 3 | 13 |
-| E | **Ink & Silhouette** | Monochrome with ink outlines, accent colour | 3 | 5 | 2 | 3 | 13 |
+| 1 | **PS1-era retro (PSX)**, occult/horror themes | Source doc | 5 | 4 | 5 | 4 | **18** ✅ |
+| 2 | Gilded Facet: bevelled low-poly, toon-lit, jewel + gold | Our earlier draft | 4 | 3 | 4 | 4 | 15 |
+| 3 | Ghibli-esque hand-painted 3D | Source doc | 2 | 5 | 5 | 3 | 15 |
+| 4 | Vector-style isometric sci-fi | Source doc | 4 | 3 | 2 | 4 | 13 |
+| 5 | HD-2D (pixel sprites in 3D dioramas) | Source doc | 2 | 5 | 3 | 3 | 13 |
+| — | Clean flat low-poly | Synty's own | 5 | 1 | 5 | 1 | 12 ❌ |
 
-## Notes
+## Why PSX wins
 
-- **A** is Synty's home turf. Competing there means racing on price and volume. Avoid.
-- **B** is a strong second choice. Cozy/farming/life-sim buyers are a big market. Risk: crowded with other "cute" packs.
-- **C** keeps the cheap atlas pipeline but changes three things buyers notice right away:
-  silhouette (exaggerated, chunky, hard edges with a bevel), lighting (toon ramp + rim),
-  and palette (jewel tones + gold). It also matches the *Ordo Caelum* ("Order of the Heavens") name:
-  celestial, occult, gothic, mythic.
-- **D** looks great but costs 3–5× as much per asset; save it for hero assets.
-- **E** is a striking niche, but the market is small and the assets are hard to reuse across genres.
+- **Fast to make:** about 100–800 tris per prop, 64–256 px textures, no normal maps, no PBR. A prop takes roughly 1–3 hours, faster than any other option except plain flat low-poly.
+- **Hard to DIY:** the "authentic PS1 look" takes vertex snapping, affine texture warping, colour quantisation, dithering, fog and consistent texel density all at once. Solo developers usually end up with a mix of mismatched free assets. **The shader kit plus one texel/palette standard is the product.**
+- **Demand:** the indie horror and retro scene (itch.io, Steam "PSX horror", Haunted PS1-type jams) is large and keeps growing.
+- **Open lane:** PSX assets exist mostly as small one-off packs from many different creators with no shared standard. Nobody runs a "Synty of PSX".
+- **Brand fit:** *Ordo Caelum* ("Order of the Heavens") suits occult orders, abbeys, cults and cosmic horror.
+- **Doesn't fight Synty:** Synty's clean, bright look is the opposite. Their buyers are potential customers, not their loyal fans.
 
-## Decision needed
+## Runners-up and how to use them
 
-Pick **C**, **B**, or a hybrid (e.g. C's shape language with B's softer palette for a "cozy mythic" line).
-The style bible (`03-style-bible.md`) is written for **C**.
+- **Gilded Facet** stays on file as a possible *second product line* (non-horror mythic fantasy) once PSX is established.
+- **Ghibli hand-painted** has the highest demand, but costs about 3–5× as much per asset. Revisit when there's revenue to hire painters.
+- **HD-2D**: avoid as the first line. It's slow to make, and the look is strongly tied to one publisher's games.

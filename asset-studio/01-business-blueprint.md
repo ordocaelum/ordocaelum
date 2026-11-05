@@ -1,7 +1,14 @@
 # Business Blueprint: Replicating the Synty Model
 
-> Figures marked *(est.)* are approximate public information or industry estimates.
-> Check them before you rely on them for financial planning.
+> Built on the source blueprint (`00-source-blueprint.md`). Figures marked *(est.)* are
+> approximate public information or industry estimates. Check them before you rely on them for financial planning.
+
+**Source model in one line:** a *"modular, hyper-standardized micro-transaction"* B2B model.
+Cheap, mass-market building blocks sold to hundreds of thousands of indie developers instead of
+custom 3D work for a few clients.
+
+**The four pillars (source doc):** the "Lego" ecosystem · engine-ready, no setup work ·
+huge thematic coverage · loss-leader pricing plus bundles.
 
 ## 1. How Synty works
 
@@ -28,8 +35,10 @@ grows over time**. The style guide is the product, and the packs are what you bu
 - One consistent style across every pack, set out in a written style bible.
 - Palette-atlas workflow to keep cost per asset low.
 - Modular kits (walls, floors, roofs, props) built on a strict grid.
-- Themed packs, plus cheaper "mini" packs that work as entry products.
-- Publishing on several marketplaces, plus your own store to own the customer relationship.
+- **Core pack, then fragment:** one big "Core" pack that's enough to prototype a whole game, then
+  hyper-specific **micro-expansions** (e.g. Core Occult → Abbey Crypt add-on → Cult Ritual add-on).
+- **Storefront traffic first:** Unity Asset Store and Fab (Epic's store that replaced the Unreal
+  Marketplace in 2024). Your own website only after the catalogue exists.
 - Demo scenes and screenshots that sell the fantasy of a finished game.
 
 **Don't copy (legal and positioning):**
@@ -37,17 +46,18 @@ grows over time**. The style guide is the product, and the packs are what you bu
 - Their pack names, themes in the same order, or any of their meshes or textures.
 - Competing head-on in their strongest genres (generic fantasy town, modern city, sci-fi base) at launch.
 
-**Positioning:** pick a **distinct style + an underserved niche** so buyers who already
-own Synty still have a reason to buy from you. See `art-direction/`.
+**Positioning:** the source doc's rule is *don't compete with Synty's low-poly look, because they own
+that market.* Copy their mechanics in a different style. **Chosen direction: PS1-era retro
+("Ordo PSX") with occult/cosmic-horror themes.** See `art-direction/`.
 
 ## 3. Revenue model
 
 | Stream | Phase | Notes |
 |---|---|---|
-| Themed packs ($40–$90 list) | 1 | Main product; 300–800 assets each |
-| Mini packs ($10–$25) | 1 | Entry product, sale bait, tests demand for a niche |
-| Bundles (marketplace and Humble-style) | 2 | Volume and new customers |
-| Own storefront (itch.io → own site) | 2 | Better margin, email list |
+| Core packs ($40–$90 list) | 1 | Main product; enough for a full prototype |
+| Micro-expansions ($10–$25) | 1–2 | Hyper-specific add-ons to a core; cheap to make, sold to existing buyers |
+| Humble Bundle / Fanatical features | 2 (after 5–10 packs) | Source doc: a single bundle can move **50,000+ copies**, the main cash injection for growth |
+| Own storefront (itch.io → own site) | 3 | Better margin, email list; not at launch |
 | Subscription / "Studio Pass" | 3 | Only after there's a back catalogue of 8+ packs |
 | Custom/outsourced art | any | Cash flow early on; don't let it crowd out pack work |
 
@@ -77,17 +87,17 @@ Unity + Unreal + Godot for packaging, Git LFS for source files, a Python batch-e
 
 | Phase | Timeline | Goal |
 |---|---|---|
-| 0: Foundation | Weeks 1–3 | Lock the art style, write the style bible, build the palette atlas, base character rig, export scripts |
-| 1: Proof | Weeks 4–12 | Ship 1 mini pack + 1 full themed pack on 2 marketplaces |
-| 2: Catalogue | Months 4–12 | 3–5 more packs in the same style; packs that build on each other; own store and email list |
-| 3: Ecosystem | Year 2 | Bundles, subscription pass, character customizer, community showcase |
+| 0: Foundation | Weeks 1–4 | Style bible, PSX shader kit, texel/atlas standard, shared skeleton, export scripts, 5 golden assets |
+| 1: Core | Weeks 5–14 | Ship **Core: Occult Abbey** on the Unity Asset Store + Fab; ship the shader kit standalone as an entry product |
+| 2: Fragment | Months 4–9 | 3–5 micro-expansions + a second core pack; reach 5–10 packs |
+| 3: Scale | Months 9–18 | Pitch Humble Bundle / Fanatical; own store + email list; subscription pass once the catalogue is 10+ packs |
 
 ## 6. Key risks
 
 | Risk | Mitigation |
 |---|---|
-| Looks like a Synty clone | Distinct shape language and shader; see the style bible |
-| Marketplace saturation in low-poly | Niche-first themes; strong demo scenes |
+| Looks like a Synty clone | Different aesthetic altogether (PSX), per the source doc's rule |
+| Small PSX creators already exist | Compete on *standardisation and scale* (shared texel density, shader kit, core + expansions), which the small packs lack |
 | Burnout from oversized packs | Mini pack first; strict asset lists |
 | Style drift as the catalogue grows | Style bible + reference "golden" assets + QA checklist |
 | Engine version churn | Packaging scripts; test every pack on the current LTS releases |
